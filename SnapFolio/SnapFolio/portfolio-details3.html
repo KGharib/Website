@@ -104,7 +104,7 @@
               </script>
 
               <div class="swiper-wrapper align-items-center" style="width: 100%;">
-    <img src="assets/img/portfolio/life_expectancy.png" 
+    <img src="assets/img/portfolio/NLP.jpg" 
          alt="Portfolio Image" 
          class="img-fluid" 
          style="width: 100%; max-width: none; height: auto;" 
@@ -118,10 +118,11 @@
             <div class="portfolio-info" data-aos="fade-left" data-aos-delay="200">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Predictive Life Analysis  </li>
+                <li><strong>Category</strong>: Machine Learning  </li>
                 <li><strong>Client</strong>: Personal Project </li>
                 <li><strong>Project date</strong>: 2020</li>
-                <li><strong>Project URL</strong>: <a href="#" target="_blank">https://github.com/KGharib/How-does-Social-Environmental-factors-affect-Life-Expectancy-in-Counties-in-the-USA</a></li>
+                <li><strong>Project URL</strong>:<a href="https://github.com/KGharib/Predicting-Sentiment-on-Amazon-Reviews"
+                  target="_blank"style="color:#00aa00; text-decoration:underline; font-weight:500;"> Sentiment Analysis </a></li>
               </ul>
             </div>
           </div>
@@ -130,19 +131,17 @@
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Project Overview</h2>
               <p>
-                I had been asked as part of a Consulting Group to Analyze the Dataset and peform Machine Learning models in order to see how certain social environmental factors 
-                affect the life expectancy in different counties in the USA  
+                Although my focus career wise has been away from Machine Learning and NLP, I have always been passionate about the field and have worked on several projects in my free time to keep my skills sharp.
+                <p>
+                Using Neural Networks to predict the Sentiment of
+                Amazon Reviews, in order to be used to classify the overall Sentiment and popularity/interests of
+                products and services when mentioned on Social Medias 
+                </p> 
               </p>
               <p>
-                Findings After analyzing and cleaning we can see the main contributers to Years of Potential Life lost Rate
-                (sum of difference between age of death and average age of death, in other words this would be the total of all the peoples difference between their age and the average age 
-                of death in the USA which is related to life expectancy, is expected age of death higher or lower than the average in the USA)
-                 for each county was most affected by these features: 
-                 <ul>
-                  <li>%_LBW - Percentage of births with low birth weight (under 2500g)</li>
-                  <li>%_Obese - Percentage of adults that report BMI >= 30 </li>
-                  <li> Food Environment index - Indicator of access to healthy foods</li>
-                 </ul>
+                Used Pytorch to build my Neural Network and used an LSTM layer as is commonly used with Sentiment Analysis.
+                 I had Also tried using CNN and RNN with Keras but found that the flexibility of building your Neural Network from scratch with Pytorch helped in getting the best accuracy and performance as compared to Keras
+              <p>I Was finally able to achieve 90% accuracy in Predictions of Reviews</p> 
 
               </p>
 
@@ -152,9 +151,9 @@
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
                       <i class="bi bi-check-circle-fill"></i>
-                      <h4>Data Collection & Cleaning</h4>
+                      <h4>End-to-End NLP & Sentiment Analysis Pipeline</h4>
                       <p>
-                        Collected and cleaned county-level social, environmental, and health data for the United States to ensure it was ready for analysis.
+                       Designed and executed a complete sentiment analysis workflow on over 2 million Amazon reviews, translating a real business problem into a scalable binary classification solution aligned with customer and PR insights.
                       </p>
                     </div>
                   </div>
@@ -162,10 +161,9 @@
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
                       <i class="bi bi-code-slash"></i>
-                      <h4>Data Exploration & Visualization</h4>
+                      <h4>Advanced Text Pre-Processing & Feature Engineering</h4>
                       <p>
-                        Explored the datasets using descriptive statistics and visualizations to uncover patterns, trends, and correlations between social/environmental factors and life expectancy.
-                      </p>
+                      Performed extensive NLP pre-processing, including label engineering, class balancing, stopword removal, tokenization, vocabulary indexing, and sequence padding/truncation to prepare raw text data for deep learning models.
                       <p>
 
                       </p>
@@ -174,20 +172,20 @@
 
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
-                      <i class="bi bi-graph-up"></i>
-                      <h4>Modeling & Analysis</h4>
+                      <i class="bi bi-file-earmark-code"></i>
+                      <h4>Deep Learning Model Development with PyTorch</h4>
                       <p>
-                        Applied statistical and machine learning models to measure the impact of different factors on life expectancy, identifying the most influential variables.
+                       Built and trained a custom LSTM neural network from scratch using PyTorch, leveraging its flexibility for fine-grained control over architecture, batching, and training—outperforming equivalent CNN and RNN models built with Keras.
                       </p>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
-                      <i class="bi bi-chat"></i>
-                      <h4>Communication of Insights</h4>
+                      <i class="bi bi-gear"></i>
+                      <h4>Model Optimization, Evaluation & Performance Tuning</h4>
                       <p>
-                       Documented the results with clear visualizations and summaries, making the findings easy to understand and highlighting actionable insights about county-level life expectancy differences.
+                      Implemented train/validation/test splits, batch loaders, and hyperparameter tuning across embeddings, hidden layers, and epochs, achieving ~90% prediction accuracy and selecting the best-performing model for evaluation.
                       </p>
                     </div>
                   </div>

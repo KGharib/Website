@@ -104,7 +104,7 @@
               </script>
 
               <div class="swiper-wrapper align-items-center" style="width: 100%;">
-    <img src="assets/img/portfolio/life_expectancy.png" 
+    <img src="assets/img/portfolio/football2.jpg" 
          alt="Portfolio Image" 
          class="img-fluid" 
          style="width: 100%; max-width: none; height: auto;" 
@@ -118,11 +118,11 @@
             <div class="portfolio-info" data-aos="fade-left" data-aos-delay="200">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Predictive Life Analysis  </li>
+                <li><strong>Category</strong>: Data Cleaning + Analysis  </li>
                 <li><strong>Client</strong>: Personal Project </li>
                 <li><strong>Project date</strong>: 2020</li>
-                <li><strong>Project URL</strong>:<a href="https://github.com/KGharib/How-does-Social-Environmental-factors-affect-Life-Expectancy-in-Counties-in-the-USA"
-                  target="_blank"style="color:#00aa00; text-decoration:underline; font-weight:500;"> Life Expectancy</a></li>
+                <li><strong>Project URL</strong>:<a href="https://github.com/KGharib/Analysing-and-Predicting-Win-Loss-for-Premier-League-Bundesliga-Games"
+                  target="_blank"style="color:#00aa00; text-decoration:underline; font-weight:500;"> Football Data Analysis </a></li>
               </ul>
             </div>
           </div>
@@ -131,20 +131,17 @@
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Project Overview</h2>
               <p>
-                I had been asked as part of a Consulting Group to Analyze the Dataset and peform Machine Learning models in order to see how certain social environmental factors 
-                affect the life expectancy in different counties in the USA  
+                Use SQL, object-oriented programming (OOP), APIs, and NoSQL databases to analyse the data. This includes performing exploratory data analysis (EDA),
+                retrieving weather data for games played in 2011 via an API, and finally exporting the enriched dataset into a NoSQL database.
+                <p>
+                I calculated the number of goals scored, as well as the wins, draws, and losses for each team during the 2011 season. 
+                The analysis showed that most teams in the dataset were from the Bundesliga.
+                When enriching the dataset with weather data via an API, 
+                we observed a high number of null values and very few rainy matchdays. As a result, 
+                calculating the percentage of wins in rainy conditions relative to total wins would have produced negligible and misleading results.
+                 Instead, we chose to present the number of wins, losses, and total games played in rainy conditions for each team.
+                </p> 
               </p>
-              <p>
-                Findings After analyzing and cleaning we can see the main contributers to Years of Potential Life lost Rate
-                (sum of difference between age of death and average age of death, in other words this would be the total of all the peoples difference between their age and the average age 
-                of death in the USA which is related to life expectancy, is expected age of death higher or lower than the average in the USA)
-                 for each county was most affected by these features: 
-                 <ul>
-                  <li>%_LBW - Percentage of births with low birth weight (under 2500g)</li>
-                  <li>%_Obese - Percentage of adults that report BMI >= 30 </li>
-                  <li> Food Environment index - Indicator of access to healthy foods</li>
-                 </ul>
-
               </p>
 
               <div class="features mt-4">
@@ -153,9 +150,9 @@
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
                       <i class="bi bi-check-circle-fill"></i>
-                      <h4>Data Collection & Cleaning</h4>
+                      <h4>Demonstrated analytical judgement by adapting metrics based on data quality</h4>
                       <p>
-                        Collected and cleaned county-level social, environmental, and health data for the United States to ensure it was ready for analysis.
+                      Identified high null values in weather data and adjusted analysis approach to present wins/losses in rainy conditions instead of calculating misleading percentages.
                       </p>
                     </div>
                   </div>
@@ -163,32 +160,31 @@
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
                       <i class="bi bi-code-slash"></i>
-                      <h4>Data Exploration & Visualization</h4>
+                      <h4>Applied a hybrid SQL–Python workflow to handle complex data structures</h4>
                       <p>
-                        Explored the datasets using descriptive statistics and visualizations to uncover patterns, trends, and correlations between social/environmental factors and life expectancy.
-                      </p>
-                      <p>
-
+                      Due to the quality of the data I Correctly determined that percentage-based win metrics would be misleading. 
+                      Instead, you reported absolute counts of wins, losses, and total rainy matches,
+                       demonstrating statistical reasoning, data quality assessment, and responsible interpretation.
                       </p>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
-                      <i class="bi bi-graph-up"></i>
-                      <h4>Modeling & Analysis</h4>
+                      <i class="bi bi-box-arrow-down"></i>
+                      <h4>Built and optimised an API data-enrichment pipeline under real-world constraints</h4>
                       <p>
-                        Applied statistical and machine learning models to measure the impact of different factors on life expectancy, identifying the most influential variables.
+                       I successfully enriched the dataset with external weather data using the DarkSky API, while working within a strict request-limit (1,000 calls/day). By caching results to CSV, you avoided redundant requests and ensured reproducibility and efficiency
                       </p>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
-                      <i class="bi bi-chat"></i>
-                      <h4>Communication of Insights</h4>
+                      <i class="bi bi-gear"></i>
+                      <h4>Designed an end-to-end data pipeline using both relational and NoSQL databases</h4>
                       <p>
-                       Documented the results with clear visualizations and summaries, making the findings easy to understand and highlighting actionable insights about county-level life expectancy differences.
+                      Completed the workflow by exporting question-specific datasets and visual outputs into MongoDB using PyMongo, showcasing the ability to work across relational (SQL) and NoSQL paradigms.
                       </p>
                     </div>
                   </div>
