@@ -16,7 +16,7 @@ export function About() {
       intro="A short version of the credibility behind the offer."
     >
       <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-panel)] shadow-[var(--shadow-panel)]">
+        <div className="glass-panel relative aspect-[4/5] overflow-hidden rounded-lg border border-[var(--color-border)]">
           <Image
             src={siteConfig.assets.aboutImage}
             alt={`${siteConfig.founderName} profile image`}

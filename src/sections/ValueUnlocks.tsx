@@ -35,7 +35,7 @@ export function ValueUnlocks() {
       title="Raw numbers tell you what happened. Structured data tells you what to do."
       intro="Use the tabs to explore the business value and the support that I can provide."
     >
-      <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-panel)] p-4 shadow-[var(--shadow-panel)] sm:p-5">
+      <div className="glass-panel rounded-lg border border-[var(--color-border)] p-4 sm:p-5">
         <div className="grid gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-deep)] p-1 sm:inline-grid sm:grid-cols-2">
           <button
             type="button"
@@ -113,7 +113,7 @@ export function ValueUnlocks() {
                   })}
                 </div>
 
-                <article className="rounded-lg border border-[var(--color-border)] bg-[var(--color-deep)] p-5 sm:p-6">
+                <article className="glass-panel rounded-lg border border-[var(--color-border)] p-5 sm:p-6">
                   <div className="grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
                     <div>
                       <Badge>Where data helps</Badge>
@@ -171,7 +171,7 @@ export function ValueUnlocks() {
 
             <div className="w-1/2 pl-3">
               <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_18rem]">
-                <article className="rounded-lg border border-[rgba(143,181,209,0.38)] bg-[var(--color-deep)] p-5 sm:p-6">
+                <article className="glass-panel rounded-lg border border-[rgba(143,181,209,0.38)] p-5 sm:p-6">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <Badge>How I help</Badge>

@@ -13,7 +13,7 @@ export function ToolsExpertise() {
     >
       <div className="grid gap-5 md:grid-cols-2">
         {toolGroups.map((group) => (
-          <article key={group.title} className="rounded-lg border border-[var(--color-border)] bg-[var(--color-panel)] p-6 shadow-[var(--shadow-panel)]">
+          <article key={group.title} className="glass-panel rounded-lg border border-[var(--color-border)] p-6">
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-contrast)]">
                 <Wrench aria-hidden="true" className="h-5 w-5" />

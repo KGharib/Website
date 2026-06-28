@@ -16,7 +16,7 @@ export function Contact() {
     >
       <span id="contact" className="block scroll-mt-0" aria-hidden="true" />
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <aside className="rounded-lg border border-[var(--color-border)] bg-[var(--color-panel)] p-6 shadow-[var(--shadow-panel)]">
+        <aside className="glass-panel rounded-lg border border-[var(--color-border)] p-6">
           <h3 className="text-xl font-bold text-[var(--color-ink)]">What you get</h3>
           <ul className="mt-5 space-y-3">
             {siteConfig.freeHealthCheck.includes.map((item) => (
@@ -68,7 +68,7 @@ export function Contact() {
           </div>
         </aside>
 
-        <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-panel)] p-6 shadow-[var(--shadow-panel)] sm:p-8">
+        <div className="glass-panel rounded-lg border border-[var(--color-border)] p-6 sm:p-8">
           <ContactForm endpoint={siteConfig.contact.contactFormEndpoint} email={siteConfig.contact.email} />
         </div>
       </div>

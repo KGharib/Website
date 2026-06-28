@@ -34,14 +34,14 @@ export function Section({
   return (
     <section
       id={id}
-      className={cx("flex min-h-screen scroll-mt-0 items-center py-10 sm:py-12", toneClasses[tone], className)}
+      className={cx("section-surface flex min-h-screen scroll-mt-0 items-center py-10 sm:py-12", toneClasses[tone], className)}
     >
       <Container className={containerClassName}>
         {(eyebrow || title || intro) && (
-          <div className="mb-6 max-w-3xl">
+          <div className="mb-6 max-w-5xl">
             {eyebrow ? <Badge className="px-4 py-2 text-sm sm:text-base">{eyebrow}</Badge> : null}
             {title ? (
-              <h2 className="mt-4 text-balance text-3xl font-bold leading-tight text-inherit sm:text-4xl">
+              <h2 className="mockup-title mt-4 text-balance text-3xl font-black uppercase leading-tight tracking-wide text-inherit sm:text-4xl lg:text-5xl">
                 {title}
               </h2>
             ) : null}
