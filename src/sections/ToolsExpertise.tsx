@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import {
-  ArrowRight,
   BarChart3,
   Brain,
   ChevronLeft,
@@ -31,6 +30,7 @@ type Skill = {
   category: string;
   description: string;
   icon: LucideIcon;
+  logoSrc?: string;
   accent: "blue" | "teal" | "violet" | "gold";
 };
 
@@ -38,11 +38,13 @@ const skillMeta: Record<string, Omit<Skill, "name" | "category">> = {
   "Power BI": {
     description: "Dashboards, data models, DAX and reporting views.",
     icon: BarChart3,
+    logoSrc: "/images/logos/powerbi.svg",
     accent: "gold"
   },
   Tableau: {
     description: "Dashboard design, reporting and visual analytics.",
     icon: PanelsTopLeft,
+    logoSrc: "/images/logos/tableau.svg",
     accent: "blue"
   },
   "Executive KPI reporting": {
@@ -63,21 +65,25 @@ const skillMeta: Record<string, Omit<Skill, "name" | "category">> = {
   Python: {
     description: "Automation, data cleaning, analysis and repeatable workflows.",
     icon: Workflow,
+    logoSrc: "/images/logos/python.svg",
     accent: "gold"
   },
   "AWS-hosted datasets": {
     description: "Cloud-hosted data foundations for reporting and analysis.",
     icon: Cloud,
+    logoSrc: "/images/logos/aws.svg",
     accent: "gold"
   },
   BigQuery: {
     description: "Cloud data querying for larger reporting datasets.",
     icon: Database,
+    logoSrc: "/images/logos/bigquery.svg",
     accent: "teal"
   },
   Redshift: {
     description: "Warehouse-backed reporting and data transformations.",
     icon: Database,
+    logoSrc: "/images/logos/redshift.svg",
     accent: "violet"
   },
   "Data warehouses": {
@@ -160,7 +166,18 @@ const outcomes = [
   { label: "Insights that drive action", icon: Sparkles }
 ] as const;
 
-const toolStrip = ["Power BI", "Tableau", "SQL", "Python", "AWS-hosted datasets", "BigQuery", "Redshift"] as const;
+const toolStrip = [
+  { label: "Power BI", logoSrc: "/images/logos/powerbi.svg" },
+  { label: "Tableau", logoSrc: "/images/logos/tableau.svg" },
+  { label: "SQL", logoSrc: null },
+  { label: "Python", logoSrc: "/images/logos/python.svg" },
+  { label: "AWS", logoSrc: "/images/logos/aws.svg" },
+  { label: "BigQuery", logoSrc: "/images/logos/bigquery.svg" },
+  { label: "Redshift", logoSrc: "/images/logos/redshift.svg" },
+  { label: "Alteryx", logoSrc: "/images/logos/alteryx.svg" },
+  { label: "Microsoft environment", logoSrc: "/images/logos/microsoft.svg" },
+  { label: "Google Workspace", logoSrc: "/images/logos/google-workspace.svg" }
+] as const;
 
 export function ToolsExpertise() {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All Skills");
@@ -246,11 +263,11 @@ export function ToolsExpertise() {
           <Image
             src="/images/expertise/image2.png"
             alt="Data expertise visual"
-            width={1440}
-            height={960}
-            quality={100}
+            width={1536}
+            height={1024}
+            unoptimized
             sizes="(min-width: 1024px) 48vw, 100vw"
-            className="relative h-full min-h-[20rem] w-full object-cover opacity-95 [mask-image:radial-gradient(circle_at_center,black_52%,transparent_82%)]"
+            className="relative h-full min-h-[20rem] w-full object-contain [mask-image:radial-gradient(circle_at_center,black_58%,transparent_86%)]"
             priority={false}
           />
         </div>
@@ -309,8 +326,26 @@ export function ToolsExpertise() {
               key={`${skill.category}-${skill.name}`}
               className="glass-panel min-h-[17rem] w-[16rem] shrink-0 snap-start rounded-lg border border-[var(--color-border)] p-6"
             >
-              <span className={cx("flex h-14 w-14 items-center justify-center rounded-lg border", accentClasses[skill.accent])}>
-                <Icon aria-hidden="true" className="h-7 w-7" />
+              <span
+                className={cx(
+                  "flex h-14 w-14 items-center justify-center rounded-lg border",
+                  skill.logoSrc
+                    ? "border-[rgba(255,255,255,0.18)] bg-[rgba(255,255,255,0.9)] shadow-[0_10px_28px_rgba(0,0,0,0.18)]"
+                    : accentClasses[skill.accent]
+                )}
+              >
+                {skill.logoSrc ? (
+                  <Image
+                    src={skill.logoSrc}
+                    alt={`${skill.name} logo`}
+                    width={40}
+                    height={40}
+                    unoptimized
+                    className="h-9 w-9 object-contain"
+                  />
+                ) : (
+                  <Icon aria-hidden="true" className="h-7 w-7" />
+                )}
               </span>
               <h3 className="mt-6 text-xl font-bold text-[var(--color-ink)]">{skill.name}</h3>
               <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">{skill.description}</p>
@@ -336,9 +371,27 @@ export function ToolsExpertise() {
         <div className="hidden h-10 w-px bg-[var(--color-border)] lg:block" />
         <div className="flex flex-wrap gap-3">
           {toolStrip.map((tool) => (
-            <span key={tool} className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold text-[var(--color-muted)]">
-              <ArrowRight aria-hidden="true" className="h-4 w-4 text-[var(--color-accent)]" />
-              {tool === "AWS-hosted datasets" ? "AWS" : tool}
+            <span
+              key={tool.label}
+              className="inline-flex items-center gap-2 rounded-full border border-[rgba(143,181,209,0.16)] bg-[rgba(255,255,255,0.04)] px-3 py-2 text-sm font-semibold text-[var(--color-muted)]"
+            >
+              {tool.logoSrc ? (
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgba(255,255,255,0.9)] p-1">
+                  <Image
+                    src={tool.logoSrc}
+                    alt={`${tool.label} logo`}
+                    width={24}
+                    height={24}
+                    unoptimized
+                    className="h-full w-full object-contain"
+                  />
+                </span>
+              ) : (
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[rgba(140,199,241,0.28)] bg-[rgba(80,120,152,0.12)] text-[10px] font-black text-[var(--color-accent)]">
+                  SQL
+                </span>
+              )}
+              {tool.label}
             </span>
           ))}
         </div>
