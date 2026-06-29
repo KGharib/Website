@@ -34,7 +34,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cx("section-surface flex min-h-screen scroll-mt-0 items-center py-10 sm:py-12", toneClasses[tone], className)}
+      className={cx("hero-one-surface flex min-h-screen scroll-mt-0 items-center py-10 sm:py-12", toneClasses[tone], className)}
     >
       <Container className={containerClassName}>
         {(eyebrow || title || intro) && (

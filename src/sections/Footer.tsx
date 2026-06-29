@@ -3,7 +3,7 @@ import { Container } from "@/components/Container";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--color-border)] bg-[var(--color-deep)] py-8 text-[var(--color-ink)] xl:ml-[330px]">
+    <footer className="border-t border-[var(--color-border)] bg-[var(--color-deep)] py-8 text-[var(--color-ink)]">
       <Container className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-bold">{siteConfig.brandName}</p>

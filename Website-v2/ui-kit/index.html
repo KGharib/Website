@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gharib Analytics UI Kit</title>
+    <meta
+      name="description"
+      content="Reusable UI kit and design system preview for the Gharib Analytics v2 website."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="kit-shell-header">
+      <div class="brand-lockup" aria-label="Gharib Analytics">
+        <span class="brand-mark">GA</span>
+        <span>
+          <strong>Gharib Analytics</strong>
+          <small>UI kit and design system</small>
+        </span>
+      </div>
+      <nav class="kit-nav" aria-label="UI kit sections">
+        <a href="#foundations">Foundations</a>
+        <a href="#core">Core</a>
+        <a href="#website">Website</a>
+        <a href="#analytics">Analytics UI</a>
+        <a href="#states">States</a>
+      </nav>
+    </header>
+
+    <main id="main" class="kit-page">
+      <section class="kit-hero">
+        <div>
+          <p class="eyebrow">Website v2 design foundation</p>
+          <h1>Premium dark UI kit for data analytics consulting.</h1>
+          <p>
+            A reusable visual system for dashboards, BI consulting, reporting automation,
+            insights, and senior analytics advisory work.
+          </p>
+        </div>
+        <div class="hero-preview-card" aria-label="Brand preview">
+          <div class="mini-dashboard">
+            <div class="mini-dashboard__top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="chart-line"></div>
+            <div class="metric-row">
+              <span><strong>94%</strong> trusted reporting</span>
+              <span><strong>12h</strong> time saved</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="foundations" class="kit-section">
+        <div class="section-heading">
+          <p class="eyebrow">01 Foundations</p>
+          <h2>Design tokens and visual language</h2>
+          <p>Professional, dark, premium, corporate-modern, and conversion-focused.</p>
+        </div>
+
+        <div class="token-grid">
+          <article class="panel">
+            <h3>Colour Palette</h3>
+            <div class="swatches">
+              <span style="--swatch: #07111f"><b>Ink Navy</b><small>#07111f</small></span>
+              <span style="--swatch: #0e1a2e"><b>Panel</b><small>#0e1a2e</small></span>
+              <span style="--swatch: #172842"><b>Raised</b><small>#172842</small></span>
+              <span style="--swatch: #e9f1f8"><b>Text</b><small>#e9f1f8</small></span>
+              <span style="--swatch: #93a6ba"><b>Muted</b><small>#93a6ba</small></span>
+              <span style="--swatch: #78b7e8"><b>Blue</b><small>#78b7e8</small></span>
+              <span style="--swatch: #69d6bb"><b>Teal</b><small>#69d6bb</small></span>
+              <span style="--swatch: #d7b76b"><b>Gold</b><small>#d7b76b</small></span>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Typography Scale</h3>
+            <div class="type-scale">
+              <p class="display">Display / Hero</p>
+              <p class="h1">H1 Page heading</p>
+              <p class="h2">H2 Section heading</p>
+              <p class="h3">H3 Card heading</p>
+              <p class="body">Body text for consultancy positioning and service explanation.</p>
+              <p class="caption">Caption / metadata / helper text</p>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Spacing, Radius, Shadow</h3>
+            <div class="spec-list">
+              <p><b>Spacing:</b> 4, 8, 12, 16, 24, 32, 48, 64, 96</p>
+              <p><b>Radius:</b> 6px controls, 10px cards, 16px feature panels, 999px pills</p>
+              <p><b>Elevation:</b> subtle border first, glow only for key CTAs and focused panels</p>
+              <p><b>Grid:</b> 12-column desktop, 6-column tablet, single-column mobile</p>
+              <p><b>Breakpoints:</b> 480, 768, 1024, 1280, 1440</p>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Dark Theme Rules</h3>
+            <ul class="check-list">
+              <li>Use contrast through depth, not bright colour everywhere.</li>
+              <li>Reserve accent colours for action, status, and meaning.</li>
+              <li>Cards should feel like dashboard surfaces, not marketing tiles.</li>
+              <li>Icons should be simple outline icons with consistent stroke weight.</li>
+              <li>Focus rings must be visible on every interactive element.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="core" class="kit-section">
+        <div class="section-heading">
+          <p class="eyebrow">02 Core Components</p>
+          <h2>Buttons, forms, badges, headings, and CTAs</h2>
+        </div>
+
+        <div class="component-grid">
+          <article class="panel">
+            <h3>Buttons</h3>
+            <div class="stack-row">
+              <button class="btn btn-primary">Primary action</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-ghost">Ghost</button>
+              <button class="btn btn-primary" disabled>Disabled</button>
+            </div>
+            <p class="helper">Primary buttons are for conversion. Secondary buttons support exploration.</p>
+          </article>
+
+          <article class="panel">
+            <h3>Text Links</h3>
+            <p class="body-copy">
+              Use inline links for supporting journeys, such as
+              <a class="text-link" href="#">view dashboard examples</a> or
+              <a class="text-link" href="#">request a data health check</a>.
+            </p>
+          </article>
+
+          <article class="panel form-panel">
+            <h3>Form Inputs</h3>
+            <label class="field">
+              <span>Name</span>
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label class="field">
+              <span>Service interest</span>
+              <select>
+                <option>Dashboard build</option>
+                <option>Reporting automation</option>
+                <option>Analytics consulting</option>
+              </select>
+            </label>
+            <label class="field field-error">
+              <span>Work email</span>
+              <input type="email" value="not-an-email" aria-invalid="true" />
+              <small>Please enter a valid work email.</small>
+            </label>
+            <label class="field field-success">
+              <span>Project context</span>
+              <textarea rows="4">We need cleaner KPI reporting.</textarea>
+              <small>Clear context helps shape the first conversation.</small>
+            </label>
+          </article>
+
+          <article class="panel">
+            <h3>Badges, Tags, Pills</h3>
+            <div class="stack-row">
+              <span class="badge">Senior data analyst</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">SQL</span>
+              <span class="pill">Available for projects</span>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Section Heading</h3>
+            <div class="section-heading compact">
+              <p class="eyebrow">Data support</p>
+              <h2>Raw data to trusted decisions.</h2>
+              <p>Use short headings that make the value clear before explaining the mechanics.</p>
+            </div>
+          </article>
+
+          <article class="cta-block">
+            <p class="eyebrow">Conversion block</p>
+            <h3>Not sure where your reporting is weak?</h3>
+            <p>Start with a focused data health check and leave with practical next steps.</p>
+            <button class="btn btn-primary">Request free health check</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="website" class="kit-section">
+        <div class="section-heading">
+          <p class="eyebrow">03 Website Components</p>
+          <h2>Reusable building blocks for the future pages</h2>
+        </div>
+
+        <article class="panel wide">
+          <h3>Navbar and Mobile Navbar</h3>
+          <nav class="sample-navbar" aria-label="Sample desktop navigation">
+            <div class="brand-lockup">
+              <span class="brand-mark">GA</span>
+              <strong>Gharib Analytics</strong>
+            </div>
+            <div>
+              <a href="#">Services</a>
+              <a href="#">Work</a>
+              <a href="#">Process</a>
+              <a href="#">About</a>
+            </div>
+            <button class="btn btn-secondary">Health check</button>
+          </nav>
+          <nav class="sample-mobile-navbar" aria-label="Sample mobile navigation">
+            <span class="brand-mark">GA</span>
+            <button class="icon-button" aria-label="Open menu"><span></span><span></span><span></span></button>
+          </nav>
+        </article>
+
+        <div class="component-grid">
+          <article class="hero-component panel">
+            <p class="eyebrow">Hero component</p>
+            <h3>Make the business value obvious in the first screen.</h3>
+            <p>Positioning, proof, primary CTA, and a dashboard-style visual should appear together.</p>
+            <div class="stack-row">
+              <button class="btn btn-primary">Start with data</button>
+              <button class="btn btn-ghost">See examples</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <span class="icon-tile">BI</span>
+            <h3>Dashboards That Leaders Trust</h3>
+            <p>Power BI, Tableau, and Looker dashboards built around decisions, not vanity metrics.</p>
+          </article>
+
+          <article class="case-card">
+            <span class="badge">Case study card</span>
+            <h3>Manual reports to automated KPI pack</h3>
+            <p>Before: repeated Excel work. After: refreshable dashboards and clear ownership.</p>
+          </article>
+
+          <article class="process-card">
+            <ol class="steps">
+              <li><span>01</span><b>Understand</b><small>Business questions and data sources</small></li>
+              <li><span>02</span><b>Structure</b><small>Clean definitions and reporting logic</small></li>
+              <li><span>03</span><b>Deliver</b><small>Dashboards, automation, and handover</small></li>
+            </ol>
+          </article>
+
+          <article class="testimonial-card">
+            <blockquote>
+              “The dashboards made performance easier to discuss and gave the team one version of the truth.”
+            </blockquote>
+            <cite>Operations lead, public sector</cite>
+          </article>
+
+          <article class="faq-card">
+            <button class="faq-trigger" aria-expanded="true">
+              Do you work with existing tools?
+              <span>+</span>
+            </button>
+            <p>Yes. The system should adapt to the client environment: Power BI, Looker, Tableau, SQL, Excel, or a mix.</p>
+          </article>
+        </div>
+
+        <article class="panel wide">
+          <h3>Footer, Logo Area, Logo Strip, Stats</h3>
+          <div class="logo-strip">
+            <span>Healthcare</span>
+            <span>Public sector</span>
+            <span>Marketing</span>
+            <span>Operations</span>
+            <span>Product</span>
+          </div>
+          <div class="stats-strip">
+            <span><b>5+</b> years analytics experience</span>
+            <span><b>BI</b> dashboards and reporting</span>
+            <span><b>SQL</b> transformation and modelling</span>
+          </div>
+          <footer class="sample-footer">
+            <span>Gharib Analytics</span>
+            <span>Data, BI, reporting automation, and insight support.</span>
+          </footer>
+        </article>
+      </section>
+
+      <section id="analytics" class="kit-section">
+        <div class="section-heading">
+          <p class="eyebrow">04 Analytics-Specific UI</p>
+          <h2>Data components that make the consultancy feel credible</h2>
+        </div>
+
+        <div class="analytics-grid">
+          <article class="dashboard-mockup">
+            <div class="dashboard-topbar">
+              <span></span><span></span><span></span>
+              <strong>Client Performance Dashboard</strong>
+            </div>
+            <div class="kpi-grid">
+              <div class="kpi-card"><small>Retention</small><b>84%</b><span>+6.4%</span></div>
+              <div class="kpi-card"><small>Reporting time</small><b>-12h</b><span>weekly</span></div>
+              <div class="kpi-card"><small>Data quality</small><b>96%</b><span>trusted</span></div>
+            </div>
+            <div class="chart-preview">
+              <span style="height: 45%"></span>
+              <span style="height: 66%"></span>
+              <span style="height: 54%"></span>
+              <span style="height: 78%"></span>
+              <span style="height: 62%"></span>
+              <span style="height: 88%"></span>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Data Table Preview</h3>
+            <table class="data-table">
+              <thead><tr><th>Metric</th><th>Status</th><th>Owner</th></tr></thead>
+              <tbody>
+                <tr><td>Revenue by channel</td><td>Trusted</td><td>Sales</td></tr>
+                <tr><td>Customer retention</td><td>Needs source</td><td>Ops</td></tr>
+                <tr><td>Weekly pipeline</td><td>Automated</td><td>BI</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="insight-card">
+            <span class="badge">Insight summary</span>
+            <h3>Follow-up timing is affecting retention.</h3>
+            <p>Customers who receive a proactive contact within 14 days are more likely to return.</p>
+          </article>
+
+          <article class="before-after-card">
+            <div>
+              <small>Before</small>
+              <p>Manual Excel reporting and conflicting KPI definitions.</p>
+            </div>
+            <div>
+              <small>After</small>
+              <p>Refreshable dashboards with agreed definitions and clearer actions.</p>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Tool Badges</h3>
+            <div class="tool-badges">
+              <span>Power BI</span>
+              <span>Looker</span>
+              <span>Tableau</span>
+              <span>SQL</span>
+              <span>Excel</span>
+              <span>Python</span>
+            </div>
+          </article>
+
+          <article class="data-flow-card">
+            <h3>Raw data to insight visual</h3>
+            <div class="data-flow">
+              <span>Raw data</span>
+              <b>&rarr;</b>
+              <span>Dashboards</span>
+              <b>&rarr;</b>
+              <span>Insights</span>
+              <b>&rarr;</b>
+              <span>Action</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="states" class="kit-section">
+        <div class="section-heading">
+          <p class="eyebrow">05 Interaction States</p>
+          <h2>Default, hover, active, focus, disabled, and mobile behaviour</h2>
+        </div>
+
+        <div class="component-grid">
+          <article class="panel">
+            <h3>Buttons and focus</h3>
+            <div class="stack-row">
+              <button class="btn btn-primary">Default</button>
+              <button class="btn btn-primary state-active">Active</button>
+              <button class="btn btn-primary state-focus">Focus</button>
+              <button class="btn btn-primary" disabled>Disabled</button>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Validation States</h3>
+            <label class="field field-success">
+              <span>Valid field</span>
+              <input value="client@company.com" />
+              <small>Looks good.</small>
+            </label>
+            <label class="field field-error">
+              <span>Error field</span>
+              <input value="missing context" aria-invalid="true" />
+              <small>Add enough detail to understand the request.</small>
+            </label>
+          </article>
+
+          <article class="panel">
+            <h3>FAQ Accordion</h3>
+            <div class="accordion">
+              <button class="accordion__trigger" aria-expanded="true">
+                What happens after the health check?
+                <span>+</span>
+              </button>
+              <div class="accordion__panel">
+                You receive a clear summary of data risks, quick wins, and practical next steps.
+              </div>
+            </div>
+          </article>
+
+          <article class="panel mobile-preview">
+            <h3>Mobile State</h3>
+            <div class="phone-frame">
+              <div class="sample-mobile-navbar">
+                <span class="brand-mark">GA</span>
+                <button class="icon-button" aria-label="Open menu"><span></span><span></span><span></span></button>
+              </div>
+              <h4>Clear data support</h4>
+              <p>Single-column layouts, larger tap targets, and concise copy.</p>
+              <button class="btn btn-primary">Book a call</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="motion-footer" aria-labelledby="motion-footer-title">
+      <div class="motion-footer__aurora" aria-hidden="true"></div>
+      <div class="motion-footer__grid" aria-hidden="true"></div>
+
+      <div class="motion-footer__marquee" aria-hidden="true">
+        <span>dashboards / reporting automation / business intelligence / trusted data / </span>
+        <span>dashboards / reporting automation / business intelligence / trusted data / </span>
+      </div>
+
+      <div class="motion-footer__content">
+        <p class="eyebrow">Gharib Analytics</p>
+        <h2 id="motion-footer-title">Turn raw data into decisions people trust.</h2>
+        <p>
+          A footer system for the future v2 website: cinematic, premium, conversion-focused,
+          and built around senior analytics consultancy.
+        </p>
+
+        <div class="motion-footer__actions">
+          <a class="magnetic-pill" href="#core">
+            <span>Review components</span>
+          </a>
+          <a class="magnetic-pill magnetic-pill--quiet" href="#analytics">
+            <span>Explore analytics UI</span>
+          </a>
+          <a class="magnetic-pill magnetic-pill--quiet" href="mailto:hello@gharibanalytics.com">
+            <span>Start a conversation</span>
+          </a>
+        </div>
+
+        <div class="motion-footer__links" aria-label="Footer links">
+          <a href="#foundations">Foundations</a>
+          <a href="#core">Core components</a>
+          <a href="#website">Website blocks</a>
+          <a href="#analytics">Analytics UI</a>
+          <a href="#states">States</a>
+        </div>
+      </div>
+
+      <div class="motion-footer__wordmark" aria-hidden="true">GHARIB ANALYTICS</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

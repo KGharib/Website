@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --color-page: #02070d;
-  --color-deep: #07111c;
+  --color-page: #020509;
+  --color-deep: #0d2438;
+  --color-page-gradient: linear-gradient(135deg, #0d2438 0%, #071421 48%, #000 100%);
   --color-panel: rgba(11, 21, 32, 0.78);
   --color-panel-strong: rgba(16, 31, 46, 0.9);
   --color-panel-soft: #1a344d;
@@ -29,10 +30,9 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 78% 12%, rgba(73, 134, 185, 0.16), transparent 34rem),
-    radial-gradient(circle at 12% 82%, rgba(31, 119, 145, 0.1), transparent 28rem),
-    var(--color-page);
+  min-height: 100vh;
+  background: var(--color-page-gradient);
+  background-attachment: fixed;
   color: var(--color-ink);
   font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -40,21 +40,8 @@ body {
 .section-surface {
   position: relative;
   overflow: hidden;
-}
-
-.section-surface::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(140, 199, 241, 0.052) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(140, 199, 241, 0.04) 1px, transparent 1px),
-    radial-gradient(circle at 82% 18%, rgba(73, 134, 185, 0.2), transparent 34rem),
-    radial-gradient(circle at 12% 78%, rgba(124, 232, 208, 0.08), transparent 28rem);
-  background-size: 42px 42px, 42px 42px, 100% 100%, 100% 100%;
-  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
-  opacity: 0.9;
+  background: var(--color-page-gradient);
+  background-attachment: fixed;
 }
 
 .section-surface > * {
@@ -62,10 +49,40 @@ body {
   z-index: 1;
 }
 
+.hero-one-surface {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-page-gradient);
+  background-attachment: fixed;
+}
+
+.hero-one-surface > * {
+  position: relative;
+  z-index: 1;
+}
+
+@layer components {
+  .nav-surface {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .nav-surface > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.nav-panel {
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
 .glass-panel {
-  background:
-    linear-gradient(145deg, rgba(17, 32, 48, 0.86), rgba(5, 12, 20, 0.9)),
-    radial-gradient(circle at 82% 10%, rgba(140, 199, 241, 0.14), transparent 16rem);
+  background: linear-gradient(145deg, rgba(13, 36, 56, 0.88), rgba(2, 5, 9, 0.92));
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow-panel), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -75,22 +92,27 @@ body {
   overflow: hidden;
   border-radius: 26px;
   border: 1px solid rgba(140, 199, 241, 0.34);
-  background:
-    linear-gradient(145deg, rgba(15, 27, 41, 0.94), rgba(5, 12, 20, 0.96)),
-    linear-gradient(rgba(140, 199, 241, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(140, 199, 241, 0.045) 1px, transparent 1px);
-  background-size: 100% 100%, 28px 28px, 28px 28px;
+  background: linear-gradient(145deg, rgba(13, 36, 56, 0.94), rgba(2, 5, 9, 0.96));
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.44), 0 0 55px rgba(80, 160, 220, 0.18);
 }
 
-.hero-dashboard::before {
-  content: "";
-  position: absolute;
-  inset: -15% -10%;
-  background:
-    radial-gradient(circle at 75% 18%, rgba(140, 199, 241, 0.26), transparent 14rem),
-    linear-gradient(115deg, transparent 0 42%, rgba(124, 232, 208, 0.12) 43%, transparent 58%);
-  pointer-events: none;
+.hero-logo-frame {
+  position: relative;
+  width: min(100%, 560px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.hero-logo-frame__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(140, 199, 241, 0.34);
+  border-radius: 42px;
+  background: rgba(11, 21, 32, 0.78);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.44), 0 0 56px rgba(80, 160, 220, 0.18);
 }
 
 .data-line {

@@ -94,8 +94,8 @@ export function Header() {
 
   return (
     <header>
-      <aside className="fixed bottom-0 left-0 top-0 z-50 hidden w-[300px] overflow-y-auto bg-[var(--color-page)] px-[15px] py-6 xl:flex xl:flex-col xl:justify-center">
-        <div className="rounded-[20px] border border-[var(--color-border)] bg-[var(--color-deep)] p-[15px]">
+      <aside className="nav-surface fixed bottom-0 left-0 top-0 z-50 hidden w-[300px] overflow-y-auto px-[15px] py-6 xl:flex xl:flex-col xl:justify-center">
+        <div className="nav-panel p-[15px]">
           <a href="#top" className="mb-6 block" aria-label={`${siteConfig.brandName} home`}>
             <Logo />
           </a>
@@ -162,7 +162,7 @@ export function Header() {
         </div>
       </aside>
 
-      <div className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-deep)] xl:hidden">
+      <div className="nav-surface sticky top-0 z-50 xl:hidden">
         <Container className="flex min-h-16 items-center justify-between gap-4 py-3">
           <a href="#top" className="leading-tight" aria-label={`${siteConfig.brandName} home`}>
             <Logo compact />
@@ -172,7 +172,7 @@ export function Header() {
           </Button>
         </Container>
 
-        <nav aria-label="Mobile navigation" className="border-t border-[var(--color-border)]">
+        <nav aria-label="Mobile navigation">
           <Container className="flex gap-4 overflow-x-auto py-3">
             {sidebarLinks.map((link) => (
               <a
