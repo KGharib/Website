@@ -12,8 +12,9 @@ export function About() {
       id="about"
       tone="white"
       eyebrow="About"
-      title="A senior data analyst helping smaller teams use data with confidence."
-      intro="A short version of the credibility behind the offer."
+      title="Senior data analyst helping you use data with confidence."
+      intro="Experienced in delivering data-driven insights and solutions across various industries."
+      containerClassName="[&>div:first-child]:max-w-none [&_h2]:xl:whitespace-nowrap"
     >
       <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
         <div className="glass-panel relative aspect-[4/5] overflow-hidden rounded-lg border border-[var(--color-border)]">
@@ -31,13 +32,14 @@ export function About() {
             <span>{siteConfig.contact.location}</span>
           </div>
           <p className="mt-5 text-lg leading-8 text-[var(--color-muted)]">
-            {siteConfig.founderName} has 5+ years of analytics and BI experience across healthcare, public
-            sector, media, marketing, and commercial reporting. The work spans SQL, Python, Power BI,
-            Tableau, KPI development, automation, and stakeholder-ready insight.
+            With 6+ years of analytics and BI experience across healthcare, public sector, media,
+            marketing, and commercial reporting, I help businesses make better use of their data.
           </p>
           <p className="mt-4 text-lg leading-8 text-[var(--color-muted)]">
-            The aim is simple: help teams move from scattered reports to clear, trusted information they can
-            actually act on.
+            My work goes beyond building reports. I help identify the problems behind unclear
+            performance, scattered data, manual reporting, and inconsistent KPIs, then build a
+            structured approach to solve them through clear analysis, practical dashboards, automated
+            reporting, and actionable insights.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {metrics.map((metric) => (
