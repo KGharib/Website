@@ -3,6 +3,7 @@ import { Contact } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
+import { ProblemSection } from "@/sections/ProblemSection";
 import { ToolsExpertise } from "@/sections/ToolsExpertise";
 import { ValueUnlocks } from "@/sections/ValueUnlocks";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <main className="xl:ml-[330px]">
         <Hero />
+        <ProblemSection />
         <ValueUnlocks />
         <ToolsExpertise />
         <About />

@@ -3,14 +3,7 @@ export const siteConfig = {
   founderName: "Khalid Gharib",
   tagline: "Data, BI & Reporting Consultant",
   typedPhrases: [
-    "Data Strategy",
-    "BI Dashboards",
-    "Automated Reporting",
-    "KPI Tracking",
-    "SQL Workflows",
-    "Power BI",
-    "Customer Insights",
-    "Data Clean-Up"
+    "unlock your data potential"
   ],
   title: "Gharib Analytics | Data, BI & Reporting Consultant",
   // TODO: Replace with your final production domain before launch.

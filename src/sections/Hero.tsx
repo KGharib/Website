@@ -23,13 +23,12 @@ export function Hero() {
           <div>
             <Badge className="px-4 py-2 text-sm sm:text-base">Data clarity for growing teams and businesses.</Badge>
             <h1 className="mockup-title mt-6 max-w-5xl text-5xl font-black uppercase leading-[0.95] tracking-wide text-[var(--color-ink)] sm:text-6xl lg:text-7xl">
-              <span className="block">Unleash the power of</span>
               <span className="block text-[var(--color-accent)]">
                 Gharib Analytics
               </span>
             </h1>
             <p className="mt-4 text-2xl font-semibold text-[var(--color-ink)] sm:text-3xl">
-              I help teams with{" "}
+              I help you{" "}
               <Typewriter
                 phrases={siteConfig.typedPhrases}
                 className="inline-block border-b-2 border-[var(--color-accent)] pb-1 text-[var(--color-accent)]"

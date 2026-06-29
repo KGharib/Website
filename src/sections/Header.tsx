@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   BriefcaseBusiness,
   CalendarCheck,
+  CircleAlert,
   Code2,
   Home,
   PanelsTopLeft,
@@ -18,6 +19,7 @@ import { cx } from "@/lib/utils";
 
 const sidebarLinks = [
   { label: "Home", href: "#top", icon: Home },
+  { label: "The Data Problem", href: "#problem", icon: CircleAlert },
   { label: "Data Support", href: "#value", icon: PanelsTopLeft },
   { label: "Expertise", href: "#expertise", icon: Wrench },
   { label: "About", href: "#about", icon: UserRound },
@@ -123,7 +125,9 @@ export function Header() {
                           activeHref === link.href ? "" : "opacity-75"
                         )}
                       />
-                      <span>{link.label}</span>
+                      <span className="min-w-0 whitespace-nowrap leading-tight">
+                        <span className="block">{link.label}</span>
+                      </span>
                     </a>
                   </li>
                 );
